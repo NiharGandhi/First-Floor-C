@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Classroom Directions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #000000;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: #DC143C;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .title-floor {
+            font-size: 18px;
+            font-weight: 600;
+            background-color: lavender;
+            border-radius: 5px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #000000;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+
+        .direction {
+            display: none;
+            margin-top: 10px;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .classroom-image {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 640px) {
+
+            /* For screens with a minimum width of 640px */
+            .classroom-image {
+                max-width: 50%;
+                height: 50%;
+            }
+        }
+    </style>
+    <script>
+        function showDirection() {
+            var select = document.getElementById("classroom-select");
+            var selectedClassroom = select.options[select.selectedIndex].value;
+            var directions = document.getElementsByClassName("direction");
+
+            for (var i = 0; i < directions.length; i++) {
+                directions[i].style.display = "none";
+            }
+
+            if (selectedClassroom !== "") {
+                var direction = document.getElementById(selectedClassroom);
+                direction.style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="title-floor">First Floor</div>
+            <div class="title">Classroom Directions</div>
+            <select id="classroom-select" class="select" onchange="showDirection()">
+                <option value="">Select a classroom</option>
+                <option value="4E">4E</option>
+                <option value="4F">4F</option>
+                <option value="4G">4G</option>
+                <option value="5A">5A</option>
+                <option value="5B">5B</option>
+                <option value="5C">5C</option>
+                <option value="5D">5D</option>
+                <option value="5E">5E</option>
+                <option value="5F">5F</option>
+                <option value="5G">5G</option>
+                <option value="5H">5H</option>
+                <option value="6A">6A</option>
+                <option value="6B">6B</option>
+                <option value="6C">6C</option>
+                <option value="6D">6D</option>
+                <option value="6E">6E</option>
+                <option value="6F">6F</option>
+                <option value="6G">6G</option>
+                <option value="6H">6H</option>
+                <option value="6I">6I</option>
+                <option value="6J">6J</option>
+                <option value="6K">6K</option>
+                <option value="7A">7A</option>
+                <option value="7B">7B</option>
+                <option value="7C">7C</option>
+                <option value="7D">7D</option>
+                <option value="7E">7E</option>
+                <option value="7F">7F</option>
+                <option value="7G">7G</option>
+                <option value="7H">7H</option>
+                <option value="7I">7I</option>
+                <option value="8A">8A</option>
+                <option value="8B">8B</option>
+                <option value="8C">8C</option>
+                <option value="8D">8D</option>
+                <option value="8E">8E</option>
+                <option value="8F">8F</option>
+                <option value="8G">8G</option>
+                <option value="8H">8H</option>
+                <option value="8I">8I</option>
+                <option value="8J">8J</option>
+            </select>
+            <div id="directions-container">
+                <div id="4E" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="4E.png" alt="Class 4E" class="classroom-image">
+                    </div>
+                </div>
+                <div id="4F" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="4F.png" alt="Class 4F" class="classroom-image">
+                    </div>
+                </div>
+                <div id="4G" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="4G.png" alt="Class 4G" class="classroom-image">
+                    </div>
+                </div>
+                <div id="5A" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="5A.png" alt="Class 5A" class="classroom-image">
+                    </div>
+                </div>
+                <div id="5B" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="5B.png" alt="Class 5B" class="classroom-image">
+                    </div>
+                </div>
+                <div id="5C" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="5C.png" alt="Class 5C" class="classroom-image">
+                    </div>
+                </div>
+                <div id="5D" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="5D.png" alt="Class 5D" class="classroom-image">
+                    </div>
+                </div>
+                <div id="5E" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="5E.png" alt="Class 5E" class="classroom-image">
+                    </div>
+                </div>
+                <div id="5F" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="5F.png" alt="Class 5F" class="classroom-image">
+                    </div>
+                </div>
+                <div id="5G" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="5G.png" alt="Class 5G" class="classroom-image">
+                    </div>
+                </div>
+                <div id="5H" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="5H.png" alt="Class 5H" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6A" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="6A.png" alt="Class 6A" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6B" class="direction">
+                    <div>Left (First Floor)</div>
+                    <div>
+                        <img src="6B.png" alt="Class 6B" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6C" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6C.png" alt="Class 6C" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6D" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6D.png" alt="Class 6D" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6E" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6E.png" alt="Class 6E" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6F" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6F.png" alt="Class 6F" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6G" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6G.png" alt="Class 6G" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6H" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6H.png" alt="Class 6H" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6I" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6I.png" alt="Class 6I" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6J" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6J.png" alt="Class 6J" class="classroom-image">
+                    </div>
+                </div>
+                <div id="6K" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="6K.png" alt="Class 6K" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7A" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7A.png" alt="Class 7A" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7B" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7B.png" alt="Class 7B" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7C" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7C.png" alt="Class 7C" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7D" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7D.png" alt="Class 7D" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7E" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7E.png" alt="Class 7E" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7F" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7F.png" alt="Class 7F" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7G" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7G.png" alt="Class 7G" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7H" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7H.png" alt="Class 7H" class="classroom-image">
+                    </div>
+                </div>
+                <div id="7I" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="7I.png" alt="Class 7I" class="classroom-image">
+                    </div>
+                </div>
+                <div id="8A" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="8A.png" alt="Class 8A" class="classroom-image">
+                    </div>
+                </div>
+                <div id="8B" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="8B.png" alt="Class 8B" class="classroom-image">
+                    </div>
+                </div>
+                <div id="8C" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="8C.png" alt="Class 8C" class="classroom-image">
+                    </div>
+                </div>
+                <div id="8D" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="8D.png" alt="Class 8D" class="classroom-image">
+                    </div>
+                </div>
+                <div id="8E" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="8E.png" alt="Class 8E" class="classroom-image">
+                    </div>
+                </div>
+                <div id="8F" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="8F.png" alt="Class 8F" class="classroom-image">
+                    </div>
+                </div>
+                <div id="8G" class="direction">
+                    <div>Straight & Left (First Floor)</div>
+                    <div>
+                        <img src="8G.png" alt="Class 8G" class="classroom-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
